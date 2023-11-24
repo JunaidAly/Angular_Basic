@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactive Form</title>
+</head>
+
+<body>
+    <form [formGroup]="loginForm" (ngSubmit)="login_Form()">
+        <input type="text" name="user" placeholder="Enter Your Name" formControlName="user">
+        <br>
+        <span style="color: red;" *ngIf="user && user.invalid && user.touched">This Field is Invalid</span>
+        <br>
+        <input type="password" name="password" placeholder="Enter Your Password" formControlName="password">
+        <br> 
+        <span style="color: red;" *ngIf="password && password.invalid && password.touched">This Field is Invalid</span>
+        <br>
+        <button [disabled]="loginForm.invalid">Login</button>
+    </form>
+</body>
+
+</html>

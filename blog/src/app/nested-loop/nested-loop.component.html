@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+<ul *ngFor="let user of users">
+    <li>{{user.Name}}</li>
+    <li>{{user.Age}}</li>
+    
+    <ul *ngFor="let account of user.accountdetails">
+        <li>{{account}}</li>
+    </ul>
+</ul>

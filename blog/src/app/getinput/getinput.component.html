@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Box</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <input type="text" 
+     placeholder="Enter Name"
+      #id1 
+      (keyup)="getinput(id1.value)" 
+      name="name"
+      >
+    <br><br>
+    <button (click)="getinput(id1.value)"> click</button>
+    <br><br>
+    <p>Box val is : {{displayValue}}</p>
+</body>
+</html>

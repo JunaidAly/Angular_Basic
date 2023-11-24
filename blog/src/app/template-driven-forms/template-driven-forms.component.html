@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Driven Forms</title>
+</head>
+<body>
+    <form  #loginform = "ngForm" (ngSubmit)="get_data(loginform.value)">
+        <input type="text" ngModel placeholder="Enter Your Name" name="name">
+        <br> <br>
+        <input type="text" ngModel placeholder="Enter Your Password" name="password">
+        <br><br>
+        <button>Login</button>
+    </form>
+
+    <ul>
+        <li>{{data.name}}</li>
+        <li>{{data.password}}</li>
+    </ul>
+</body>
+</html>

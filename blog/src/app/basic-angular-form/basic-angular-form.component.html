@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form #basicForm="ngForm" (ngSubmit)="getdata(basicForm.value)">
+        <input type="text" name="user" ngModel placeholder="Enter Your Name:">
+        <br><br>
+        <input type="email" name="email" ngModel placeholder="Enter Your Email:">
+        <br><br>
+        <input type="text" name="pass" ngModel placeholder="Enter Your Password:">
+        <br> <br>
+        <button >Register</button>
+    </form>
+
+    <ul>
+        <li>{{userData.user}}</li>
+        <li>{{userData.email}}</li>
+        
+    </ul>
+</body>
+</html>
